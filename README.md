@@ -4,15 +4,17 @@ not by GenAI. Replace every [bracketed prompt] with your own words, then delete
 the prompts and this comment.
 -->
 
-# [Title]
+# Evolving Neural Networks through Augmenting Topologies (NEAT)
 
 ## Why I chose this topic
-[Your personal motivation. Where did your interest in evolving networks come from?]
+The reason why I was rather forward about researching NEAT was predominantly due to my lab work with Prof. Castro. In his lab, I am the Lead of AI Research in Digital Olfaction Prediction, essentially scent prediction based on molecular structure and augmentation. You see, in our lab we work in claude workflows of machine learning and use models of loss measured neural networks through augmenting weights via gradient decent; however, through NEAT we get to extend this idea, and I have been eager to learn more.  
 
 ## Background: neural networks in one page
-[What a neuron computes, layers, how gradient descent trains a network. Link the resources you used.]
+Neural networks are essentially a set of machine learning algorithms that are based after the human mind. Given the name. In more of a computer science sense, it is helpful to draw the comparison of a search tree, where there is a root, there are nodes, and leafs. When referring back to a NN it is effectively the same, however with different names. A NN consists of layers at a minimum of three. There is first an input layer (what would be most similar to a root node) where raw data is stored and initially passed into either a hidden layer or an output layer. Next would be the hidden layer, where there could be an infinite about of layers, this is where actual computation is occurring. Finally, there is the output layer where a result is stored as a prediction or also commonly a regression result (most similar to the leaf of a search tree).
 
-## Evolving networks instead of training them
+Each individual node, or in this case neuron, processes data in its own way. Data is passed through and multiplied by a weight (which is the strength of the incoming connection). Typically a NN will train weights on gradient decent and augment them to minimize a statistical loss.
+
+## What does NEAT do different? 
 [What neuroevolution is. How NEAT works: minimal start, add-node / add-connection mutations, innovation numbers, speciation. Cite Stanley & Miikkulainen 2002.]
 
 ## Experiment 1: NEAT solves XOR
