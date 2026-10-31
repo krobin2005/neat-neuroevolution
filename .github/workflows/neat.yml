@@ -1,0 +1,28 @@
+# Runs the NEAT XOR experiment on every push (standalone repo version).
+name: NEAT on XOR
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  run-neat:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Evolve a network that solves XOR
+        run: python xor_neat.py
+
+      - name: Save the fitness plot
+        uses: actions/upload-artifact@v4
+        with:
+          name: xor-fitness-plot
+          path: results/xor_fitness.png
