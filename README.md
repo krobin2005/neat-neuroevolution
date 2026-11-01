@@ -55,4 +55,4 @@ Upon starting project 2 I understood the greater concept of evolving neural netw
 
 ## GenAI disclosure
 - The notebooks, code, GitHub workflow and slides were built with help from Claude (Anthropic).
-- All writing done by me, however used Claude for formatting such as the table for the "What's in this repo"
+- All writing done by me, however used Claude for a citation and formatting the table for the "What's in this repo"
