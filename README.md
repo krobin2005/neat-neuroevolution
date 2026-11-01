@@ -15,15 +15,11 @@ Neural networks (NN) are essentially a set of machine learning algorithms that a
 Each individual node, or in this case neuron, processes data in its own way. Data is passed through and multiplied by a weight (which is the strength of the incoming connection). Typically a NN will train weights on gradient decent and adjust them to minimize a statistical loss.
 
 ## What does NEAT do different? 
-[What neuroevolution is: evolution changes both the weights AND the shape, using only a fitness score, no gradients. How NEAT works: starts with no hidden layer at all (ties back to your layers paragraph), add-node / add-connection mutations, innovation numbers so parents with different shapes can be crossed, speciation so new structure gets time to improve. Cite Stanley & Miikkulainen 2002.]
+Neuroevolution is taking the the structure of a neural network and using it to minimize a loss through evolution instead of gradient decent. While gradient decent will alter weights to minimize loss, NEAT will alter the weights as well as the topology (NN structure), such as adding nodes. 
 
 ## Experiment 1: Is it a 7? (gradient descent vs. NEAT)
 - Run it: open `colab/3_Is_it_a_7_GD_vs_NEAT.ipynb` in Colab and click Run all
-- [The setup in your words: real handwritten digits, the network answers "7 or not 7", and both methods get the correct answers to learn from]
-- [What you expected before running it]
-- [What happened: gradient descent 97.6% vs. NEAT 95.0% on 597 unseen digits, and how much smaller NEAT's network was (8 hidden neurons / 529 parameters vs. 0 hidden / 44 parameters)]
-- [NEAT's mistakes were mostly 4s and 5s it called 7s. Why might those digits fool it?]
-- [What this tells you: when you have the answers, is NEAT worth it?]
+The experiment revolves around a NEAT NN learning what is the number 7 on real handwritten pixels. The model will answer "7 or not 7". Something I expected in this experiment was that I thought both implementations of gradient decent and NEAT would both be successful. This later proved to be true with gradient decent predicting on 97.6% accuracy and NEAT at 95%; however NEAT predicted on a far smaller network. For these sorts of implementations I actually don't NEAT is the better model, I rather think that NEAT is more effective in networks with several output nodes. 
 
 ## Experiment 2: Balancing a pole (where gradient descent can't start)
 - Run it: open `colab/4_Pole_Balancing_NEAT.ipynb` in Colab and click Run all
