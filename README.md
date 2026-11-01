@@ -12,17 +12,17 @@ Each individual node, or in this case neuron, processes data in its own way. Dat
 Neuroevolution takes the structure of a neural network and minimizes a loss through evolution instead of gradient descent. While gradient descent will alter weights to minimize loss, NEAT (Stanley & Miikkulainen, 2002) will alter the weights as well as the topology (NN structure), such as adding nodes, to maximize a fitness score. 
 
 ## Experiment 1: Is it a 7? (gradient descent vs. NEAT)
-- Run it: open `colab/3_Is_it_a_7_GD_vs_NEAT.ipynb` in Colab and click Run all
+- Run it: open [`colab/3_Is_it_a_7_GD_vs_NEAT.ipynb` in Colab](https://colab.research.google.com/drive/1t3kmPYeb1TJIRyt8WHRsWN9JAJd8jXRA) and click Run all
 
 The experiment revolves around a NEAT and gradient NN learning what is the number 7 on real handwritten pixels. The model will answer "7 or not 7". Something I expected in this experiment was that I thought both implementations of gradient descent and NEAT would be successful. This later proved to be true with gradient descent predicting with 97.6% accuracy and NEAT at 95%; however NEAT predicted on a far smaller network: 0 hidden neurons and 44 parameters for NEAT, vs. 8 hidden neurons and 529 parameters for gradient descent. For these sorts of implementations my experimentation showed that with labeled answers gradient descent will win on accuracy, but NEAT leads in using a far smaller network while also not needing to define a topology. 
 
 ## Experiment 2: Balancing a pole (where gradient descent can't start)
-- Run it: open `colab/4_Pole_Balancing_NEAT.ipynb` in Colab and click Run all
+- Run it: open [`colab/4_Pole_Balancing_NEAT.ipynb` in Colab](https://colab.research.google.com/drive/1EMredMgzzYVcR5ExYm7fKCLBYe91zncT) and click Run all
 
 The main benefit of NEAT is displayed in great proportion throughout this experiment in comparison to a gradient descent based NN. In problems where a decision is not proven to be correct, gradient descent cannot learn; so in turn it is guessing. Gradient descent's only feedback is how close it is to the right answer. NEAT however can learn through augmenting topologies and continue with mutations that push the model to a higher fitness. NEAT pushed to balance the pole for 500 steps (the max) while on the other hand random pushing can make it about 20 steps, a clear and significant win for NEAT. I chose to also use this experiment because it is what is used in the NEAT paper with the exception that the paper balances two poles instead of one.  
 
 ## Teaching it: the class activity
-- Open `colab/5_Class_Activity_Break_NEAT.ipynb` in Colab
+- Open [`colab/5_Class_Activity_Break_NEAT.ipynb` in Colab](https://colab.research.google.com/drive/1vgpc0Srk8DdiIyxIpHwlCUhIv3wLa0q6)
 
 The class activity takes an XOR gate and has NEAT solve it. XOR cannot be solved without hidden neurons so it requires NEAT to add nodes. The first portion is a normal NEAT run on the problem and plots fitness, species, and a final network. The second portion takes altered parameters that are intended to break NEAT and show its weaknesses and requirements. The alterations are listed below:
 
