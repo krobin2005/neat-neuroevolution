@@ -24,12 +24,7 @@ The experiment revolves around a NEAT NN learning what is the number 7 on real h
 ## Experiment 2: Balancing a pole (where gradient descent can't start)
 - Run it: open `colab/4_Pole_Balancing_NEAT.ipynb` in Colab and click Run all
 - [The setup in your words: a cart pushes left or right to keep a pole upright, and there is no "correct push" for each moment, only a score for how long it stayed up]
-- [Why gradient descent has nothing to learn from here]
-- [What happened: NEAT balanced 500 steps (the max) on new starts vs. about 20 for random pushing, with 0 hidden neurons]
-- [Connect it to the paper: this is the same kind of task the paper used to show NEAT beating other methods]
-
-## My own question: how much does luck matter?
-[You reran NEAT 5 times on the circle task with only the random seed changed: 78.0%, 86.5%, 74.0%, 88.0%, 74.5%. What does that range tell you about trusting a single run, and how does it relate to the paper averaging over many runs?]
+The main benefit of NEAT is displayed in great proportion throughout this experiment in comparison to a gradient decent based NN. In real physics problems gradient decent will not function due to a need to know what the correct answer actually is. For gradient decent to function there needs to be a output node that is predetermined, so in turn it has nothing to learn and is just guessing. NEAT however can learn through augmenting topologies and continued to balance the pole for 500 steps (the max) while on the other hand random pushing can make it about 20 steps, a clear and significant win for NEAT. I chose to also use this experiment because it is what is used in the NEAT paper with the exception that the paper balances two poles instead of one.  
 
 ## Teaching it: the class activity
 - Open `colab/5_Class_Activity_Break_NEAT.ipynb` in Colab
