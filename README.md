@@ -23,17 +23,21 @@ The experiment revolves around a NEAT NN learning what is the number 7 on real h
 
 ## Experiment 2: Balancing a pole (where gradient descent can't start)
 - Run it: open `colab/4_Pole_Balancing_NEAT.ipynb` in Colab and click Run all
-- [The setup in your words: a cart pushes left or right to keep a pole upright, and there is no "correct push" for each moment, only a score for how long it stayed up]
 The main benefit of NEAT is displayed in great proportion throughout this experiment in comparison to a gradient decent based NN. In real physics problems gradient decent will not function due to a need to know what the correct answer actually is. For gradient decent to function there needs to be a output node that is predetermined, so in turn it has nothing to learn and is just guessing. NEAT however can learn through augmenting topologies and continued to balance the pole for 500 steps (the max) while on the other hand random pushing can make it about 20 steps, a clear and significant win for NEAT. I chose to also use this experiment because it is what is used in the NEAT paper with the exception that the paper balances two poles instead of one.  
 
 ## Teaching it: the class activity
 - Open `colab/5_Class_Activity_Break_NEAT.ipynb` in Colab
-- [What the activity asks people to do (turn off parts of NEAT and predict what breaks) and why you designed it that way]
-- [How it mirrors the paper's ablation study]
-- [What the class found, if you want to add it after Nov 3]
+The class activity takes an XOR gate and has NEAT solve. XOR cannot be solved without hidden neurons so it requires NEAT to add nodes. The first portion a normal NEAT run on the problem and plots fitness, species, and a final network. The second portion takes altered parameters that are intended to break NEAT and show its weaknesses and requirements. The alterations are listed below:
+  A: can’t add neurons (it can never solve XOR)
+  B: no species (new ideas get no protection)
+  C: only 10 networks instead of 150
+  D: huge random weight jumps
+  E: adds neurons too eagerly
+  F: can’t add or remove connections
+I am hoping for a class discussion following some experimentation. This is the same study done in the papers ablation study however at a smaller scale where each of NEAT's necessities are turned off to show how they all matter. 
 
-## What I learned / what was hard
-[The hardest concept and how it finally clicked. Maybe a before/after: early on you weren't sure what NEAT even was.]
+## Reflection: What I learned / what was hard
+Upon starting project 2 I understood the greater concept of evolving neural networks, although I did not really understand what was going on behind the curtain. Reading and working on NEAT experimentation has  helped me understand how models of machine learning are applicable an several mediums; consequently, it also embedded the common saying in computer science that there is "no free lunch". What I mean in saying this is that NEAT can be especially effective in scenarios, but other implementations are better in other instances. Pushing me to understand that in everybody's project in this module are crucial in all of there own ways. What I thought was particularly difficult in the project is comprehending and digesting difficult papers such as NEAT. It tends to take me a couple reads and extensive research to grasp the idea of high academic material.      
 
 ## What's in this repo
 [One line each in your words: `colab/` (the five notebooks), `gd_vs_neat.ipynb` (all experiments in one notebook), `neat_activity.ipynb`, `xor_neat.py` + `config-xor.ini` (the first warm-up run, also what the GitHub workflow runs), `requirements.txt`]
