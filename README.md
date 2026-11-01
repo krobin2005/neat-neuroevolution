@@ -1,9 +1,3 @@
-<!--
-OUTLINE ONLY. Project II rules: the final README text must be written by Kyle,
-not by GenAI. Replace every [bracketed prompt] with your own words, then delete
-the prompts and this comment.
--->
-
 # Evolving Neural Networks through Augmenting Topologies (NEAT)
 
 ## Why I chose this topic
@@ -45,10 +39,20 @@ I am hoping for a class discussion following some experimentation. This is the s
 Upon starting project 2 I understood the greater concept of evolving neural networks, although I did not really understand what was going on behind the curtain. Reading and working on NEAT experimentation has helped me understand how models of machine learning are applicable in several mediums; consequently, it also embedded the common saying in computer science that there is "no free lunch". What I mean in saying this is that NEAT can be especially effective in scenarios, but other implementations are better in other instances. Pushing me to understand that in everybody's project in this module are crucial in all of their own ways. What I thought was particularly difficult in the project is comprehending and digesting difficult papers such as NEAT. It tends to take me a couple reads and extensive research to grasp the idea of high academic material.      
 
 ## What's in this repo
-[One line each in your words: `colab/` (the five notebooks), `gd_vs_neat.ipynb` (all experiments in one notebook), `neat_activity.ipynb`, `xor_neat.py` + `config-xor.ini` (the first warm-up run, also what the GitHub workflow runs), `requirements.txt`]
+| File | What it is |
+| --- | --- |
+| `colab/` | The five Colab notebooks: XOR, circle, Is it a 7?, pole balancing, and the class activity |
+| `gd_vs_neat.ipynb` | All the gradient descent vs. NEAT experiments in one notebook |
+| `neat_activity.ipynb` | The class activity (experiment cards A–F) |
+| `xor_neat.py`, `config-xor.ini` | First warm-up run: NEAT evolves a network that solves XOR. The GitHub workflow runs this on every push |
+| `requirements.txt` | Python packages: `pip install -r requirements.txt` |
+| `.github/workflows/neat.yml` | GitHub Actions workflow |
 
 ## References
 - Stanley, K. O., & Miikkulainen, R. (2002). Evolving Neural Networks through Augmenting Topologies. *Evolutionary Computation*, 10(2), 99–127.
 - neat-python documentation: https://neat-python.readthedocs.io
-- [Handwritten digits dataset: scikit-learn `load_digits`]
-- [Add videos, readings, and your GenAI use (notebooks, slides and code were built with Claude; this README text is your own)]
+- Handwritten digits dataset: scikit-learn `load_digits` (UCI optical recognition of handwritten digits)
+
+## GenAI disclosure
+- The notebooks, code, GitHub workflow and slides were built with help from Claude (Anthropic).
+- The README text is my own writing. With Professor Eaton's approval, Claude fixed spelling and formatting only, and filled in the file table and references above.
